@@ -34,9 +34,10 @@
           >
           <ul class="navigation-list list">
             <li class="navigation-item">
-              <a class="navigation-link" href="index.html">Agencja</a>
+              <a class="navigation-link active-link" href="index.html"
+                >Agencja</a
+              >
             </li>
-
             <li class="navigation-item">
               <a class="navigation-link" href="portfolio.html">Portfolio</a>
             </li>
@@ -68,7 +69,9 @@
             Efektywne rozwiązania <br />
             dla waszego biznesu
           </h1>
-          <button class="button-order" type="button">Zamów usługę</button>
+          <button class="button-order" data-modal-open type="button">
+            Zamów usługę
+          </button>
         </div>
       </section>
       <section class="main-description">
@@ -127,7 +130,7 @@
         <div class="container">
           <h2 class="activities caption">Czym się zajmujemy</h2>
           <ul class="activities-list description-list list">
-            <li>
+            <li class="activities-item">
               <img
                 class="main-what-we-do-image"
                 src="images/computer.jpg"
@@ -135,8 +138,11 @@
                 width="370"
                 height="294"
               />
+              <div class="activities-text">
+                <p class="activities-description">Aplikacje komputerowe</p>
+              </div>
             </li>
-            <li>
+            <li class="activities-item">
               <img
                 class="main-what-we-do-image"
                 src="images/mobile.jpg"
@@ -144,8 +150,11 @@
                 width="370"
                 height="294"
               />
+              <div class="activities-text">
+                <p class="activities-description">Aplikacje mobilne</p>
+              </div>
             </li>
-            <li class="main-what-we-do-item">
+            <li class="activities-item">
               <img
                 class="main-what-we-do-image"
                 src="images/tablet.jpg"
@@ -153,6 +162,9 @@
                 width="370"
                 height="294"
               />
+              <div class="activities-text">
+                <p class="activities-description">Rozwiązania graficzne</p>
+              </div>
             </li>
           </ul>
         </div>
@@ -517,5 +529,13 @@
         </div>
       </section>
     </footer>
+    <div class="backdrop is-hidden" data-modal>
+      <div class="modal">
+        <button type="button" class="modal-close" data-modal-close>
+          &times;
+        </button>
+      </div>
+    </div>
+    <script src="./js/modal.js"></script>
   </body>
 </html>

@@ -31,7 +31,6 @@ ul {
 .portfolio-background {
   background-color: var(--brand-color-white);
 }
-
 .top {
   background-color: var(--brand-color-white);
   display: flex;
@@ -84,8 +83,14 @@ ul {
   letter-spacing: 0.02em;
   text-decoration: none;
 }
+.navigation-item {
+  position: relative;
+}
 .navigation-link:hover {
   color: var(--brand-color-blue);
+  transition-property: color;
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 .contact {
   display: flex;
@@ -233,6 +238,35 @@ ul {
 .activities-list {
   display: flex;
   gap: 30px;
+  padding-bottom: 94px;
+}
+.activities-item {
+  position: relative;
+}
+.activities-description {
+  font-size: 14px;
+  font-weight: 700;
+  line-height: 1.14;
+  text-align: center;
+  letter-spacing: 0.03em;
+  text-transform: uppercase;
+  color: var(--brand-color-white);
+  align-content: center;
+}
+.main-what-we-do-image {
+  height: 100%;
+}
+
+.activities-text {
+  position: absolute;
+  background: rgba(47, 48, 58, 0.8);
+  display: flex;
+
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  padding-top: 27px;
+  padding-bottom: 27px;
 }
 .caption {
   font-weight: 700;
@@ -350,11 +384,40 @@ ul {
 .clients-item:focus .clients-icon {
   fill: var(--brand-color-blue);
 }
+.project-box {
+  position: relative;
+  overflow: hidden;
+}
+.project-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+
+  background-color: var(--brand-color-blue);
+
+  transition-property: transform;
+  transform: translateY(100%);
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+}
+.project-overlay-text {
+  font-style: inherit;
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 1.56;
+  letter-spacing: 0.03em;
+  color: var(--brand-color-white);
+
+  padding: 49px 45px 49px 24px;
+}
+.project-item:hover .project-overlay {
+  transform: translateY(0);
+}
 .project-list {
   display: flex;
   flex-wrap: wrap;
   gap: 30px;
-  padding-bottom: 94px;
+  padding-top: 50px;
 }
 .project-item:hover,
 .project-item:focus {
@@ -464,4 +527,73 @@ ul {
   display: flex;
   align-content: center;
   gap: 70px;
+}
+.is-hidden {
+  pointer-events: none;
+  visibility: hidden;
+  opacity: 0;
+  transition-delay: 500ms;
+}
+.backdrop {
+  position: fixed;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  width: 100%;
+  height: 100%;
+  transition-property: visibility, opacity, transform;
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  visibility: visible;
+}
+.modal {
+  position: absolute;
+  padding-top: 221px;
+  left: 50%;
+  width: 528px;
+  min-height: 581px;
+  background-color: var(--brand-color-white);
+  box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
+    0px 2px 1px rgba(0, 0, 0, 0.2);
+  border-radius: 4px;
+  transform: translate(-50%, 38%) scale(1);
+  transition-property: transform;
+  transition-duration: 1s;
+  transition-timing-function: ease;
+  z-index: 10;
+}
+
+.modal-close {
+  position: absolute;
+  top: 8px;
+  right: 8px;
+  width: 30px;
+  height: 30px;
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  background-color: var(--brand-color-white);
+  border-radius: 50%;
+  cursor: pointer;
+}
+.active-link {
+  color: var(--brand-color-blue);
+}
+.active-link::after {
+  content: "";
+  background-color: var(--brand-color-blue);
+  width: 100%;
+  height: 4px;
+  display: flex;
+  justify-content: center;
+  position: absolute;
+  top: 48px;
+
+  border-radius: 2px;
+}
+.is-hidden .modal {
+  transform: translate(50%, 50%) scale(0.25);
+  transition-property: transform;
+  transition-duration: 1s;
+  transition-timing-function: ease;
 }
