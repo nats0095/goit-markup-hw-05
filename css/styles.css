@@ -113,12 +113,22 @@ ul {
 }
 .contact-link:hover .contact-icon {
   fill: var(--brand-color-blue);
+  transition-property: fill;
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 .contact-link:focus .contact-icon {
   fill: var(--brand-color-blue);
+  fill: var(--brand-color-blue);
+  transition-property: fill;
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 .contact-link:hover {
   color: var(--brand-color-blue);
+  transition-property: color;
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 .main-section {
   background-image: linear-gradient(
@@ -175,6 +185,10 @@ ul {
 .button-order:focus {
   background-color: var(--brand-color-white);
   color: var(--brand-color-blue);
+  color: var(--brand-color-blue);
+  transition-property: background-color, color;
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 .filter-list {
   display: flex;
@@ -199,6 +213,12 @@ ul {
 .filter-button:focus {
   background-color: var(--brand-color-blue);
   color: var(--brand-color-white);
+  box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 0px 1px 2px rgba(0, 0, 0, 0.08),
+    0px 2px 2px rgba(0, 0, 0, 0.12);
+  cursor: pointer;
+  transition-property: color, background-color, box-shadow;
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 .main-description-list {
   display: flex;
@@ -354,6 +374,9 @@ ul {
 }
 .team-list-icon:hover {
   background-color: var(--brand-color-blue);
+  transition-property: background-color;
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 .clients-list {
   display: flex;
@@ -373,6 +396,9 @@ ul {
 }
 .clients-item:hover {
   border-color: var(--brand-color-blue);
+  transition-property: border-color;
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 .clients-icon {
   fill: var(--brand-color-gray3);
@@ -380,6 +406,9 @@ ul {
 
 .clients-item:hover .clients-icon {
   fill: var(--brand-color-blue);
+  transition-property: fill;
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 .clients-item:focus .clients-icon {
   fill: var(--brand-color-blue);
@@ -518,6 +547,9 @@ ul {
 }
 .address-join-item:hover {
   background-color: var(--brand-color-blue);
+  transition-property: background-color;
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 .address-join-item:hover .address-join-item:focus {
   fill: var(--acent-color);
